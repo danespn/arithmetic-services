@@ -8,7 +8,7 @@ const port = 3000;
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Arithmetic service - Hello World!');
+    res.send('Arithmetic service - Hello World! Thank you!');
 });
 
 app.listen(port);
