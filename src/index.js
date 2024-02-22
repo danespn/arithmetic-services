@@ -26,7 +26,6 @@ app.get('/sub/:n/:m', (req, res) => {
     let sum = sub(n,m);
         res.json(sum);
 });
-
 app.get('/mult/:n/:m', (req, res) => {
     let n = Number(req.params.n);
     let m = Number(req.params.m);
