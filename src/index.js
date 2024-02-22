@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const {add, sub, mult} = require("./arithmetica")
+const {add, sub, mult, div} = require("./arithmetica")
 const app = express();
 
 const port = 3000;
