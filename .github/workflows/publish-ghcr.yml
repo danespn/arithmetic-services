@@ -17,4 +17,9 @@ jobs:
             docker login --username danespn --password ${{secrets.ACCESS_TOKEN}} ghcr.io
             docker build -t ghcr.io/danespn/arithmetic-service:latest --file Dockerfile .
             docker push ghcr.io/danespn/arithmetic-service:latest
+        - name: Publish the image to azure container registry
+          run: |
+            docker login --username danespenPracticum15 --password ${{secrets.AZURE_CONTAINER_REGISTRY}} danespenPracticum15.azurecr.io
+            docker tag ghcr.io/danespen/arithmetic-services:1 practicum15/azurcr.io/arithmetic-services:1
+            docker push practicum15.azurcr.io/arithmetic-services:1
           
